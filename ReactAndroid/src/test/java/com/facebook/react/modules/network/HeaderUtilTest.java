@@ -27,23 +27,8 @@ public class HeaderUtilTest {
   }
 
   @Test
-  public void valueStripKeepsLetters() {
-    assertEquals(ALPHABET_TEST, HeaderUtil.stripHeaderValue(ALPHABET_TEST));
-  }
-
-  @Test
   public void nameStripKeepsNumbers() {
     assertEquals(NUMBERS_TEST, HeaderUtil.stripHeaderName(NUMBERS_TEST));
-  }
-
-  @Test
-  public void valueStripKeepsNumbers() {
-    assertEquals(NUMBERS_TEST, HeaderUtil.stripHeaderValue(NUMBERS_TEST));
-  }
-
-  @Test
-  public void valueStripKeepsSpecials() {
-    assertEquals(SPECIALS_TEST, HeaderUtil.stripHeaderValue(SPECIALS_TEST));
   }
 
   @Test
@@ -52,18 +37,8 @@ public class HeaderUtilTest {
   }
 
   @Test
-  public void valueStripKeepsTabs() {
-    assertEquals(TABULATION_TEST, HeaderUtil.stripHeaderValue(TABULATION_TEST));
-  }
-
-  @Test
   public void nameStripDeletesTabs() {
     assertEquals(TABULATION_STRIP_EXPECTED, HeaderUtil.stripHeaderName(TABULATION_TEST));
-  }
-
-  @Test
-  public void valueStripRemovesExtraSymbols() {
-    assertEquals(BANNED_TEST_EXPECTED, HeaderUtil.stripHeaderValue(VALUE_BANNED_SYMBOLS_TEST));
   }
 
   @Test
